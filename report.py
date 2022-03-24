@@ -73,9 +73,7 @@ def NoMultiThread():
         client.Spam(userid, username, reasonid)
         print("")
 
-
-if __name__ == "__main__":
-    print("""            .xUHWH!! !!?RYSONN:.
+mr = """            .xUHWH!! !!?RYSONN:.
                 .X*#M@$!!  !X!M$$$$$$WWx:.
                :!!!!!!?H! :!$!$$$$$$$$$$8X:
               !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
@@ -93,16 +91,25 @@ W$@@M!!! .!~~ !!     .:XUW$W!~ "~:    :
 .~~   :X@!.-~   ?@WTWo("*$$$W$TH$!          
 Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!          
 $R@i.~~ !     :   ~$$$$$B$$en:`            
-?MXT@Wx.~    :     ~"##*$$$$M~""")
+?MXT@Wx.~    :     ~"##*$$$$M~
+
+Reporter Rubika version 1.0
+
+Mr Shobadeh gar , mmd ryson
+
+https://rubika.ir/caetorr
+"""
+if __name__ == "__main__":
+    print(mr)
     PrintStatus("Loading users!")
     USERS = LoadUsers("./users.txt")
     PrintStatus("Loading Proxes!")
     PROXIES = LoadProxies("./proxy.txt")
     print("")
 
-    username = GetInput("enter account username you want to complain :")
-    userid = GetInput("number of report you want to complain :")
-    useproxy = GetInput("Do you want to use proxy? [yes no]:")
+    username = GetInput("enter account username you want to complain >>>")
+    userid = GetInput("number of report you want to complain>>>")
+    useproxy = GetInput("Do you want to use proxy? [yes no] >_")
     if (useproxy == "yes"):
         useproxy = True
     elif (useproxy == "no"):
@@ -110,7 +117,7 @@ $R@i.~~ !     :   ~$$$$$B$$en:`
     else:
         PrintFatalError("Please just enter 'yes' or 'no'!")
         exit(0)
-    usemultithread = GetInput("Do you want to use multithreading? [Yes / No] (Do not use this feature if you have too many users or if your computer is slow!):")
+    usemultithread = GetInput("Do you want to use multithreading? [Yes / No] (Do not use this feature if you have too many users or if your computer is slow!")
     
     if (usemultithread == "yes"):
         usemultithread = True
