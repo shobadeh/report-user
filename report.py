@@ -1,8 +1,4 @@
-#CYBER NAME BLACK-KILLER
-#INSTAGRAM : https://www.instagram.com/shubham_g0sain
-#CYBER NAME BLACK-KILLER
-# coding=utf-8
-#!/usr/bin/env python3
+#yeah
 """ 
 Mr Shobadeh gar
 """
@@ -16,12 +12,12 @@ from time import time, sleep
 from random import choice
 from multiprocessing import Process
 
-from utils.py import CheckPublicIP, IsProxyWorking
-from utils.py import PrintStatus, PrintSuccess, PrintError
-from utils.py import PrintBanner, GetInput, PrintFatalError
-from utils.py import LoadUsers, LoadProxies, PrintChoices
+from utils import CheckPublicIP, IsProxyWorking
+from utils import PrintStatus, PrintSuccess, PrintError
+from utils import PrintBanner, GetInput, PrintFatalError
+from utils import LoadUsers, LoadProxies, PrintChoices
 
-from instaclient.py import InstaClient
+from instaclient import InstaClient
 
 USERS = []
 PROXIES = []
