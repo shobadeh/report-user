@@ -3,18 +3,17 @@ p='\033[1;35m'
 clear
 echo -e "\033[1;32m"
 clear
-echo -e $g 'Please Wait mr shobadeh gar===+['$p'>              '$g']\'
+echo -e $g 'Please Wait mr shobadeh gar ===+['$p'>              '$g']\'
 sleep 0.2
 cd main
 clear
-echo -e $g 'Please Wait mr shobadehgar===+['$p'-------------> '$g']\'
+echo -e $g 'Please Wait mr shobadehgar ===+['$p'-------------> '$g']\'
 sleep 0.2
-pip3 install requests
 clear
 echo -e $g 'Please Wait mr shobadehgar ===+['$p'-------------->'$g']|'
 sleep 0.2
 pip3 install mechanize
-python3 -m pip install requests
+pip install requests
 clear 
 echo -e "$g+++++++++++++++>$p[Please Wait]$g<++++++++++++++"
 sleep 0.4
