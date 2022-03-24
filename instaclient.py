@@ -56,7 +56,7 @@ class InstaClient:
             "User-Agent": self.user_agent,
             "X-CSRFToken": self.csrftoken,
             "X-IG-App-ID": "1",
-            "X-Rubika-AJAX": "1",
+            "X-Web.Rubika-AJAX": "1",
             "X-Requested-With": "XMLHttpRequest",
             "Pragma": "no-cache",
             "Cache-Control": "no-cache"
@@ -103,7 +103,7 @@ class InstaClient:
 
         if (self.ip != None and self.port != None):
             PrintSuccess("Proxy working! (Proxy:", self.user ,self.ip, ":" ,self.port, ")")
-        self.GetAndUpdate("https://www.rubika.ir/accounts/login/")
+        self.GetAndUpdate("https://web.rubika.ir/#/login/")
         if (self.IsCookiesOK() != True):
             PrintError("Cookies could not be received! Try another proxy! (Proxy:", self.user, self.ip, ":", self.port, ")")
             self.isproxyok = False
@@ -114,8 +114,8 @@ class InstaClient:
         if (self.isproxyok != True):
             return
 
-        self.SetDefaultHeaders("https://www.rubika.ir/accounts/login/")
-        res = self.PostAndUpdate("https://www.rubika.ir/accounts/login/ajax/",{
+        self.SetDefaultHeaders("https://web.rubika.ir/#/login/")
+        res = self.PostAndUpdate("https://web.rubika.ir/#/login/",{
             "username": self.user,
             "password": self.password,
             "queryParams": "{}",
@@ -148,8 +148,8 @@ class InstaClient:
         if (self.isproxyok != True):
             return
 
-        profileURL = "https://www.rubika.ir/" + username + "/"
-        reportURL = "https://www.rubika.ir/users/" + userid + "/report/"
+        profileURL = "https://web.rubika.ir/#im?um=" + username + "/"
+        reportURL = "https://web.rubika.ir/#im?um=users/" + userid + "/report/"
 
         self.SetDefaultHeaders(profileURL)
         self.GetAndUpdate(profileURL)
