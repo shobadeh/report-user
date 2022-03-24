@@ -6,7 +6,6 @@ clear
 echo -e $g 'Please Wait ===+['$p'>              '$g']\'
 sleep 0.2
 cd main
-nano users.txt 
 clear
 echo -e $g 'Please Wait ===+['$p'-------------> '$g']\'
 sleep 0.2
