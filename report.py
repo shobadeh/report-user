@@ -73,7 +73,10 @@ def NoMultiThread():
         client.Spam(userid, username, reasonid)
         print("")
 
-mr = """            .xUHWH!! !!?RYSONN:.
+mr = """
+
+
+                 .xUHWH!! !!?RYSONN:.
                 .X*#M@$!!  !X!M$$$$$$WWx:.
                :!!!!!!?H! :!$!$$$$$$$$$$8X:
               !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
@@ -98,6 +101,8 @@ Reporter Rubika version 1.0
 Mr Shobadeh gar , mmd ryson
 
 https://rubika.ir/caetorr
+
+
 """
 if __name__ == "__main__":
     print(mr)
