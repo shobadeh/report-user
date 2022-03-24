@@ -16,12 +16,12 @@ from time import time, sleep
 from random import choice
 from multiprocessing import Process
 
-from libs.utils import CheckPublicIP, IsProxyWorking
-from libs.utils import PrintStatus, PrintSuccess, PrintError
-from libs.utils import PrintBanner, GetInput, PrintFatalError
-from libs.utils import LoadUsers, LoadProxies, PrintChoices
+from utils.py import CheckPublicIP, IsProxyWorking
+from utils.py import PrintStatus, PrintSuccess, PrintError
+from utils.py import PrintBanner, GetInput, PrintFatalError
+from utils.py import LoadUsers, LoadProxies, PrintChoices
 
-from libs.instaclient import InstaClient
+from instaclient.py import InstaClient
 
 USERS = []
 PROXIES = []
