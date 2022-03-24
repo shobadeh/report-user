@@ -75,7 +75,6 @@ def NoMultiThread():
 
 
 if __name__ == "__main__":
-    PrintBanner()
     PrintStatus("Loading users!")
     USERS = LoadUsers("./users.txt")
     PrintStatus("Loading Proxes!")
