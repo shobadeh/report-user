@@ -4,9 +4,9 @@ Mr Shobadeh gar
 """
 
 __author__ = "@Creator_Ryson"
-__license__ = "GPLv3"
+__license__ = "mr"
 __version__ = "0.2"
-__status__ = "being developed"
+__status__ = "mr shobadehgar"
 
 from time import time, sleep
 from random import choice
@@ -75,6 +75,25 @@ def NoMultiThread():
 
 
 if __name__ == "__main__":
+    print("""            .xUHWH!! !!?RYSONN:.
+                .X*#M@$!!  !X!M$$$$$$WWx:.
+               :!!!!!!?H! :!$!$$$$$$$$$$8X:
+              !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
+             :!~::!H!<   ~.U$X!?R$$$$$$$$MM!
+             ~!~!!!!~~ .:XW$$$U!!?$$$$$$RMM!
+               !:~~~ .:!M"T#$$$$WX??#MRMMDM!
+              ~?WuxiW*   "#$$$$8!!!!??!!!     
+             :X- M$$$$       "T#$T~!8$WUXU~
+             :%  ~#$$$m:        ~!~ ?$$$$$$
+          :!.-   ~T$$$$8xx.  .xWW- ~""##*"
+.....   -~~:< !    ~?T#$$@@W@*?$$      /
+W$@@M!!! .!~~ !!     .:XUW$W!~ "~:    :
+#"~~.:x%!!  !H:   !WM$$$$Ti.: .!WUn+!
+:::~:!!:X~ .: ?H.!u "$$$B$$$!W:U!T$$M~
+.~~   :X@!.-~   ?@WTWo("*$$$W$TH$!          
+Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!          
+$R@i.~~ !     :   ~$$$$$B$$en:`            
+?MXT@Wx.~    :     ~"##*$$$$M~""")
     PrintStatus("Loading users!")
     USERS = LoadUsers("./users.txt")
     PrintStatus("Loading Proxes!")
