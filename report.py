@@ -568,7 +568,7 @@ restart ok-? (y/n)""")
 if me == "y":
     print ("OK")
     os.syatem("python report.py")
-if == me "n":
+if me == "n":
     print ("OK")
     sys.exit
 
