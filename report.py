@@ -18,7 +18,7 @@ from utils import PrintBanner, GetInput, PrintFatalError
 from utils import LoadUsers, LoadProxies, PrintChoices
 
 from instaclient import InstaClient
-
+import time
 USERS = []
 PROXIES = []
 
