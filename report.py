@@ -141,6 +141,18 @@ if __name__ == "__main__":
     print("")
     PrintStatus("Starting!")
     print("")
+    time.sleep(0.5)
+    print ("   reported")
+    time.sleep(0.5)
+    print ("   reported")
+    time.sleep(0.5)
+    print ("   reporter")
+    time.sleep(0.5)
+    print ("   reported")
+    time.sleep(0.5)
+    print ("   reported")
+    time.sleep(0.5)
+    print ("   reporter")
 
     if (usemultithread == False):
         NoMultiThread()
