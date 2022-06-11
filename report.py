@@ -156,12 +156,21 @@ if __name__ == "__main__":
             time.sleep(1)
             print ('\n\033[20;37m[N0T SPAM] :(')
             pass
-        PrintStatus("\n\033[34m\n<#>\n")
+        try:
+            PrintStatus("\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m @{username}\033[00;00m\033[00m\n\n")
+        except:
+            time.sleep(1)
+            print ('\n\033[20;37m[NOT SPAM] :(')
 
         if (usemultithread == False):
+            time.sleep(1)
+            print ()
+            print (Fore.BLUE+'')
             NoMultiThread()
         else:
             for user in USERS:
+                time.sleep(1)
+                print ()
                 p = Process(target=MultiThread,
                     args=(username,
                         userid,
