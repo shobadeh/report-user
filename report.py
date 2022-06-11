@@ -141,26 +141,25 @@ if __name__ == "__main__":
     time.sleep(1)
     reasonid = GetInput("\nPlease select one of the reasons for the above complaint (ex: 1 for spam) >>> ")
 
-    
+    print (f'\n\033[20;37mstarting [reporter] | target: @{username}\n')
     userid1 = 0
     while userid != userid1:
         time.sleep(1)
-        print (f'\n\033[20;37mstarting [reporter] | target: @{username}\n')
-        print()
+        print ()
         data = ('`\M3gt6HHdtuTe\REPORT\`')
         json = {"api_version":"5","method":"messenger","data":{"id":f"{username}","send_type":"REPORT"}}
         headers = {'Host': 'https://messenger817.iranlms.ir/','content-length': '96','accept': 'application/json, text/plain, */*','user-agent': pyuseragents.random(),'content-type': 'text/plain','origin': 'https://web.rubika.ir/','sec-fetch-site':'cross-site','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://web.rubika.ir/','accept-encoding': 'gzip, deflate, br','accept-language': 'fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6','content-length':'143'}
         try:
             requests.post('https://messenger817.iranlms.ir/',headers=headers,json=json,data=data)
             time.sleep(6.5)
-            print (f'\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m@{username}\033[00;00m\033[00m')
+            print (f'\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m@{username}\033[00;00m\033[00m\n')
         except:
             time.sleep(1)
             print ('\n\033[20;37m[N0T SPAM] :(')
             pass
         try:
             time.sleep(6.5)
-            PrintStatus(f"\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m @{username}\033[00;00m\033[00m\n\n")
+            PrintStatus(f"\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m @{username}\033[00;00m\033[00m\n")
         except:
             time.sleep(1)
             print ('\n\033[20;37m[NOT SPAM] :(')
