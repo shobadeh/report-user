@@ -74,7 +74,7 @@ def NoMultiThread():
         client.Spam(userid, username, reasonid)
         print("")
 
-mr = """
+mr = """\033[56m
 
 
                  .xUHWH!! !!?RYSONN:.
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     reasonid = GetInput("Please select one of the reasons for the above complaint (ex: 1 for spam):")
 
     
-    userid1 = '0'
+    userid1 = 0
     while userid > userid1:
         print()
         data = ('`\M3gt6HHdtuTe\REPORT\`')
