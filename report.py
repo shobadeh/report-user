@@ -146,7 +146,7 @@ if __name__ == "__main__":
         try:
             requests.post('https://messenger817.iranlms.ir/',headers=headers,json=json,data=data)
             time.sleep(6.5)
-            print (f'\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[46m@{username}')
+            print (f'\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m@{username}\033[00;00m\033[00m')
         except:
             time.sleep(1)
             print ('\n\033[20;37m[N0T SPAM] :(')
