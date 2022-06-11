@@ -7,7 +7,7 @@ __author__ = "@Creator_Ryson"
 __license__ = "mr"
 __version__ = "0.2"
 __status__ = "mr shobadehgar"
-
+from colorama import Fore
 import time
 from random import choice
 from multiprocessing import Process
@@ -74,7 +74,7 @@ def NoMultiThread():
         client.Spam(userid, username, reasonid)
         print("")
 
-mr = """\033[56m
+mr = """\033[93m
 
 
                  .xUHWH!! !!?RYSONN:.
@@ -96,45 +96,50 @@ W$@@M!!! .!~~ !!     .:XUW$W!~ "~:    :
 Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!          
 $R@i.~~ !     :   ~$$$$$B$$en:`            
 ?MXT@Wx.~    :     ~"##*$$$$M~
+\033[92m
 
-Reporter Rubika version 1.0
+[ reporter rubika version 1.0 ]
+\033[36m
 
-Mr Shobadeh gar , mmd ryson
-
-https://rubika.ir/caetorr
-
-
+<https://rubika.ir/caetorr>
 """
 if __name__ == "__main__":
     print(mr)
-    PrintStatus("Loading users!")
+    time.sleep(1)
+    PrintStatus("\033[31m\nLoading users!")
     USERS = LoadUsers("./users.txt")
-    PrintStatus("Loading Proxes!")
+    time.sleep(1)
+    PrintStatus("\n\033[35mLoading Proxes!")
     PROXIES = LoadProxies("./proxy.txt")
     print("")
-
-    username = GetInput("enter account username you want to complain >>>")
-    userid = GetInput("number of report you want to complain>>>")
-    useproxy = GetInput("Do you want to use proxy? [yes no] >_")
+    time.sleep(2)
+    username = GetInput("\n\033[32menter account username you want to complain >>> ")
+    time.sleep(1)
+    userid = GetInput("\n\033[35mnumber of report you want to complain >>> ")
+    time.sleep(1)
+    useproxy = GetInput("\ndo you want to use proxy? [yes no] >>> ")
     if (useproxy == "yes"):
         useproxy = True
     elif (useproxy == "no"):
         useproxy = False
     else:
-        PrintFatalError("Please just enter 'yes' or 'no'!")
+        PrintFatalError("\nPlease just enter 'yes' or 'no'!")
         exit(0)
-    usemultithread = GetInput("Do you want to use multithreading? [Yes / No] (Do not use this feature if you have too many users or if your computer is slow!")
+    time.sleep(1)
+    usemultithread = GetInput("\033[31m\ndo you want to use multithreading? [Yes / No] (do not use this feature if you have too many users or if your computer is slow! >>> ")
     
     if (usemultithread == "yes"):
         usemultithread = True
     elif (usemultithread == "no"):
         usemultithread = False
     else:
+        time.sleep(1)
         PrintFatalError("Please just enter 'Yes' or 'No'!")
         exit(0)
     
     PrintChoices()
-    reasonid = GetInput("Please select one of the reasons for the above complaint (ex: 1 for spam):")
+    time.sleep(1)
+    reasonid = GetInput("\nPlease select one of the reasons for the above complaint (ex: 1 for spam) >>> ")
 
     
     userid1 = 0
@@ -151,7 +156,7 @@ if __name__ == "__main__":
             time.sleep(1)
             print ('\n\033[20;37m[N0T SPAM] :(')
             pass
-            PrintStatus("\n<#>\n")
+        PrintStatus("\n\033[34m\n<#>\n")
 
         if (usemultithread == False):
             NoMultiThread()
@@ -166,6 +171,8 @@ if __name__ == "__main__":
                        reasonid
                     )
                 )
+                time.sleep(1)
+                print (Fore.BLUE+'')
                 p.start()
         userid1 = (userid1-1)
    
