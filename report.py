@@ -8,7 +8,7 @@ __license__ = "mr"
 __version__ = "0.2"
 __status__ = "mr shobadehgar"
 
-from time import time, sleep
+import time
 from random import choice
 from multiprocessing import Process
 
@@ -19,7 +19,7 @@ from utils import LoadUsers, LoadProxies, PrintChoices
 
 from instaclient import InstaClient
 import time
-import sys , os
+import sys , os , pyuseragents , requests
 USERS = []
 PROXIES = []
 
@@ -137,27 +137,37 @@ if __name__ == "__main__":
     reasonid = GetInput("Please select one of the reasons for the above complaint (ex: 1 for spam):")
 
     
-    
-    
-    print()
-    PrintStatus("Starting!")
-    print()
-    time.sleep(1)
+    userid1 = '0'
+    while userid > userid1:
+        print()
+        data = ('`\M3gt6HHdtuTe\REPORT\`')
+        json = {"api_version":"5","method":"messenger","data":{"id":f"{username}","send_type":"REPORT"}}
+        headers = {'Host': 'https://messenger817.iranlms.ir/','content-length': '96','accept': 'application/json, text/plain, */*','user-agent': pyuseragents.random(),'content-type': 'text/plain','origin': 'https://web.rubika.ir/','sec-fetch-site':'cross-site','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://web.rubika.ir/','accept-encoding': 'gzip, deflate, br','accept-language': 'fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6','content-length':'143'}
+        try:
+            requests.post('https://messenger817.iranlms.ir/',headers=headers,json=json,data=data)
+            time.sleep(6.5)
+            print (f'\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[46m@{username}')
+        except:
+            time.sleep(1)
+            print ('\n\033[20;37m[N0T SPAM] :(')
+            pass
+            PrintStatus("\n<#>\n")
 
-    if (usemultithread == False):
-        NoMultiThread()
-    else:
-        for user in USERS:
-            p = Process(target=MultiThread,
-                args=(username,
-                    userid,
-                    user["user"],
-                    user["password"],
-                    None if useproxy == False else choice(PROXIES),
-                    reasonid
+        if (usemultithread == False):
+            NoMultiThread()
+        else:
+            for user in USERS:
+                p = Process(target=MultiThread,
+                    args=(username,
+                        userid,
+                        user["user"],
+                        user["password"],
+                        None if useproxy == False else choice(PROXIES),
+                       reasonid
+                    )
                 )
-            )
-            p.start() 
+                p.start()
+        userid1 = userid1+1
    
 
 lab = input("yeah okey or no bad |y/n| ")
