@@ -1,7 +1,7 @@
-#yeah
-""" 
-Mr Shobadeh gar
-"""
+# !/usr/bin/python
+# the reporter
+# ------ json payload , mian file compiled ------
+'''Mr Shobadeh Gar'''
 
 __author__ = "@Creator_Ryson"
 __license__ = "mr"
@@ -106,21 +106,21 @@ $R@i.~~ !     :   ~$$$$$B$$en:`
 if __name__ == "__main__":
     print(mr)
     time.sleep(1)
-    PrintStatus("\033[31m\nLoading users!")
+    PrintStatus("\n\033[31m\nLoading users!\n")
     USERS = LoadUsers("./users.txt")
     time.sleep(1)
-    PrintStatus("\n\033[35mLoading Proxes!")
+    PrintStatus("\n\033[35mLoading Proxes!\n")
     PROXIES = LoadProxies("./proxy.txt")
     print("")
     time.sleep(2)
-    username = GetInput("\n\033[32menter account username you want to complain >>> ")
+    username = GetInput("\n\033[32menter account username you want to complain >>> \033[20;37m")
     time.sleep(1)
-    userid = GetInput("\n\033[35mnumber of report you want to complain >>> ")
+    userid = GetInput("\n\033[35mnumber of report you want to complain >>> \033[20;37m")
     time.sleep(1)
-    useproxy = GetInput("\ndo you want to use proxy? [yes no] >>> ")
-    if (useproxy == "yes"):
+    useproxy = GetInput("\ndo you want to use proxy? [yes no] >>> \033[20;37m")
+    if (useproxy == "yes".lower()):
         useproxy = True
-    elif (useproxy == "no"):
+    elif (useproxy == "no".lower()):
         useproxy = False
     else:
         PrintFatalError("\nPlease just enter 'yes' or 'no'!")
@@ -128,9 +128,9 @@ if __name__ == "__main__":
     time.sleep(1)
     usemultithread = GetInput("\033[31m\ndo you want to use multithreading? [Yes / No] (do not use this feature if you have too many users or if your computer is slow! >>> ")
     
-    if (usemultithread == "yes"):
+    if (usemultithread == "yes".lower()):
         usemultithread = True
-    elif (usemultithread == "no"):
+    elif (usemultithread == "no".lower()):
         usemultithread = False
     else:
         time.sleep(1)
@@ -144,6 +144,8 @@ if __name__ == "__main__":
     
     userid1 = 0
     while userid != userid1:
+        time.sleep(1)
+        print (f'\n\033[20;37mstarting [reporter] | target: @{username}\n')
         print()
         data = ('`\M3gt6HHdtuTe\REPORT\`')
         json = {"api_version":"5","method":"messenger","data":{"id":f"{username}","send_type":"REPORT"}}
@@ -157,7 +159,8 @@ if __name__ == "__main__":
             print ('\n\033[20;37m[N0T SPAM] :(')
             pass
         try:
-            PrintStatus("\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m @{username}\033[00;00m\033[00m\n\n")
+            time.sleep(6.5)
+            PrintStatus(f"\n\033[92m[SENDED] ~> \033[93m|SPAM| TARGET ~> \033[20;37m @{username}\033[00;00m\033[00m\n\n")
         except:
             time.sleep(1)
             print ('\n\033[20;37m[NOT SPAM] :(')
