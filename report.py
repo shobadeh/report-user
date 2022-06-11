@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
     
     userid1 = 0
-    while userid > userid1:
+    while userid == userid1:
         print()
         data = ('`\M3gt6HHdtuTe\REPORT\`')
         json = {"api_version":"5","method":"messenger","data":{"id":f"{username}","send_type":"REPORT"}}
@@ -167,7 +167,7 @@ if __name__ == "__main__":
                     )
                 )
                 p.start()
-        userid1 = (userid1+1)
+        userid1 = (userid1-1)
    
 
 lab = input("yeah okey or no bad |y/n| ")
